@@ -3,5 +3,8 @@
     <span>{{item}}</span>
     <span class="remove" (click)="onDelete(item)">×</span>
   </span>
-  <input #input autofocus (blur)="this.onChange(input.value);" class="ng-input-element" type="text">
+  <input #input autofocus
+         (blur)="this.onChange(input.value);"
+         class="ng-input-element"
+         type="text">
 </div>

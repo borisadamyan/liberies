@@ -80,7 +80,7 @@ export class NgBubbleInputComponent implements OnInit, AfterViewInit, OnChanges,
     } else {
       this.itemsList.pop();
     }
-    this.change$.emit(this.itemsList);
+    this.delete$.emit(this.itemsList);
   }
 
   ngOnDestroy(): void {
