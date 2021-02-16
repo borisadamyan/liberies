@@ -1,24 +1,64 @@
-# NgBubbleInput
+# **ng-bubble-input**
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
-## Code scaffolding
+1. [Usage](#usage)
+2. [Styles](#styles)
+3. [Events](#events)
 
-Run `ng generate component component-name --project ng-bubble-input` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-bubble-input`.
-> Note: Don't forget to add `--project ng-bubble-input` or else it will be added to the default project in your `angular.json` file. 
+## **Usage**
 
-## Build
+![Bubble input example image](https://github.com/borisadamyan/liberies/blob/master/src/assets/images/bubble-input.png?raw=true)
 
-Run `ng build ng-bubble-input` to build the project. The build artifacts will be stored in the `dist/` directory.
+```angular2html
+<div style="width: 250px">
+  <ng-bubble-input></ng-bubble-input>
+</div>
+```
 
-## Publishing
 
-After building your library with `ng build ng-bubble-input`, go to the dist folder `cd dist/ng-bubble-input` and run `npm publish`.
+## **Styles**
 
-## Running unit tests
+### You can use you custom class name for styling bubble-input
 
-Run `ng test ng-bubble-input` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```angular2html
+<div style="width: 250px">
+  <ng-bubble-input 
+    [defaultClass]="'my-custom-class'">
+  </ng-bubble-input>
+</div>
+```
 
-## Further help
+```scss
+::ng-deep.my-custom-class{
+'some custom styles'
+  .ng-bubble-item{
+  'some custom styles'
+    .ng-bubble-remove{
+      'some custom styles'
+    }
+  }
+  .ng-bubble-input{
+  'some custom styles'
+  }
+}
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**[⬆ back to top](#ng-bubble-input)**
+
+## **Events**
+
+```angular2html
+<div style="width: 250px">
+  <ng-bubble-input
+    (change)="onChange(event)"
+    (delete)="onDelete(event)">
+  </ng-bubble-input>
+</div>
+```
+
+#### Output value
+// array of strings  - ['I'm','bubble','input']
+
+
+
+**[⬆ back to top](#ng-bubble-input)**
