@@ -56,8 +56,18 @@
 </div>
 ```
 
+```typescript
+onChange(list) {
+  console.log(list);
+}
+
+onChange(list) {
+  console.log(list);
+}
+```
+
 #### Output value
-// array of strings  - ['I'm','bubble','input']
+// array of strings  - ['I'm', 'bubble', 'input']
 
 
 
