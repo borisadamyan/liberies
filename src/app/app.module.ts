@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {NgBubbleInputModule} from '../../projects/ng-bubble-input/src/lib/ng-bubble-input.module';
+import {NgBubbleInputModule} from 'ng-bubble-input';
 
 @NgModule({
   declarations: [
