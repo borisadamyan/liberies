@@ -1,10 +1,13 @@
 <div [class]="defaultClass">
-  <span class="bubble" *ngFor="let item of itemsList">
-    <span>{{item}}</span>
-    <span class="remove" (click)="onDelete(item)">×</span>
+  <span class="ng-bubble-item" *ngFor="let item of itemsList">
+
+    <span class="ng-bubble-text">{{item}}</span>
+    <span class="ng-bubble-remove" (click)="onDelete(item)">×</span>
+
   </span>
+
   <input #input autofocus
          (blur)="this.onChange(input.value);"
-         class="ng-input-element"
+         class="ng-bubble-input"
          type="text">
 </div>

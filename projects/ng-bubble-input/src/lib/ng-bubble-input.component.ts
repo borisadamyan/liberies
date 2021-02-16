@@ -22,7 +22,7 @@ import {takeUntil, tap} from 'rxjs/operators';
 })
 export class NgBubbleInputComponent implements OnInit, AfterViewInit, OnChanges, OnDestroy {
 
-  @ViewChild('input', {static: true}) input: ElementRef | undefined;
+  @ViewChild('input', {static: true}) input!: ElementRef;
 
   @Output() change$ = new EventEmitter<string[]>();
 

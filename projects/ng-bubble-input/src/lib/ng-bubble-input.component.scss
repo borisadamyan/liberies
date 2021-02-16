@@ -8,9 +8,7 @@
   border-radius: 2px;
   border: solid 1px #afb3c5;
 
-  .bubble {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  .ng-bubble-item {
     display: flex;
     align-items: center;
     padding: 1px 2px 1px 9px;
@@ -24,7 +22,7 @@
     max-height: 24px;
     line-height: 20px;
 
-    .remove {
+    .ng-bubble-remove {
       display: inline-block;
       position: relative;
       top: 0;
@@ -41,13 +39,14 @@
     }
   }
 
-  .ng-input-element {
+  .ng-bubble-input {
     height: 30px;
     border: 0;
     flex: 1;
     text-indent: 8px;
     color: #61697d;
     width: inherit;
+    min-width: 50px;
 
     &:focus {
       outline: none;
