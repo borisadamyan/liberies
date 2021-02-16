@@ -46,6 +46,7 @@ import { NgBubbleInputModule } from 'ng-bubble-input';
     'rewrite styles'
   }
 }
+```
 
 
 ### You can use you custom class name for styling bubble-input
