@@ -1,9 +1,14 @@
 # **ng-bubble-input**
 
 
-1. [Usage](#usage)
-2. [Styles](#styles)
-3. [Events](#events)
+1. [Demo](#demo)
+2. [Usage](#usage)
+3. [Styles](#styles)
+4. [Events](#events)
+
+## **Demo**
+
+https://stackblitz.com/edit/ng-bubble-input?devtoolsheight=33&file=src/app/app.module.ts
 
 ## **Usage**
 
@@ -14,7 +19,17 @@
   <ng-bubble-input></ng-bubble-input>
 </div>
 ```
+### Add NgBubbleInputModule in  app.module.ts
+```typescript
+import { NgBubbleInputModule } from 'ng-bubble-input';
 
+@NgModule({
+  imports:[ 
+    ...,
+    NgBubbleInputModule],
+    ...
+})
+```
 
 ## **Styles**
 
