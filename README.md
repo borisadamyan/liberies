@@ -1,86 +1,64 @@
-# clean-code-javascript
-
-## Table of Contents
-
-1. [Introduction](#introduction)
-2. [Variables](#variables)
-3. [Functions](#functions)
-4. [Objects and Data Structures](#objects-and-data-structures)
-5. [Classes](#classes)
-6. [SOLID](#solid)
-7. [Testing](#testing)
-8. [Concurrency](#concurrency)
-9. [Error Handling](#error-handling)
-10. [Formatting](#formatting)
-11. [Comments](#comments)
-12. [Translation](#translation)
-
-## Introduction
-
-![Bubble input example image](https://www.osnews.com/images/comics/wtfm.jpg)
+# ng-bubble-input
 
 
+1. [Usage](#usage)
+2. [Styles](#styles)
+3. [Events](#functions)
 
-## **Variables**
+## **Usage**
 
-### Use meaningful and pronounceable variable names
+![Bubble input example image](https://github.com/borisadamyan/liberies/blob/master/src/assets/images/bubble-input.png?raw=true)
 
-**Bad:**
-
-```javascript
-const yyyymmdstr = moment().format("YYYY/MM/DD");
+```angular2html
+<div style="width: 250px">
+  <ng-bubble-input></ng-bubble-input>
+</div>
 ```
 
-**Good:**
 
-```javascript
-const currentDate = moment().format("YYYY/MM/DD");
+## **Styles**
+
+### You can use you custom class name for styling bubble-input
+
+```angular2html
+<div style="width: 250px">
+  <ng-bubble-input 
+    [defaultClass]="'my-custom-class'">
+  </ng-bubble-input>
+</div>
 ```
 
-**[⬆ back to top](#table-of-contents)**
-
-### Use the same vocabulary for the same type of variable
-
-**Bad:**
-
-```javascript
-getUserInfo();
-getClientData();
-getCustomerRecord();
-```
-
-**Good:**
-
-```javascript
-getUser();
+```scss
+::ng-deep.my-custom-class{
+'some custom styles'
+  .ng-bubble-item{
+  'some custom styles'
+    .ng-bubble-remove{
+      'some custom styles'
+    }
+  }
+  .ng-bubble-input{
+  'some custom styles'
+  }
+}
 ```
 
 **[⬆ back to top](#table-of-contents)**
 
-### Use searchable names
+## **Events**
 
-We will read more code than we will ever write. It's important that the code we
-do write is readable and searchable. By _not_ naming variables that end up
-being meaningful for understanding our program, we hurt our readers.
-Make your names searchable. Tools like
-[buddy.js](https://github.com/danielstjules/buddy.js) and
-[ESLint](https://github.com/eslint/eslint/blob/660e0918933e6e7fede26bc675a0763a6b357c94/docs/rules/no-magic-numbers.md)
-can help identify unnamed constants.
-
-**Bad:**
-
-```javascript
-// What the heck is 86400000 for?
-setTimeout(blastOff, 86400000);
+```angular2html
+<div style="width: 250px">
+  <ng-bubble-input
+    (change)="onChange(event)"
+    (delete)="onDelete(event)">
+  </ng-bubble-input>
+</div>
 ```
 
-**Good:**
+#### Output value
+// array of strings  - ['I'm','bubble','input']
 
-```javascript
-// Declare them as capitalized named constants.
-const MILLISECONDS_IN_A_DAY = 60 * 60 * 24 * 1000; //86400000;
 
-setTimeout(blastOff, MILLISECONDS_IN_A_DAY);
-```
 
 **[⬆ back to top](#table-of-contents)**

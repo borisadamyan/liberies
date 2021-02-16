@@ -24,9 +24,9 @@ export class NgBubbleInputComponent implements OnInit, AfterViewInit, OnChanges,
 
   @ViewChild('input', {static: true}) input!: ElementRef;
 
-  @Output() change$ = new EventEmitter<string[]>();
+  @Output() change = new EventEmitter<string[]>();
 
-  @Output() delete$ = new EventEmitter<string[]>();
+  @Output() delete = new EventEmitter<string[]>();
 
   @Input() defaultClass = 'ng-bubble-input-box';
 
@@ -70,7 +70,7 @@ export class NgBubbleInputComponent implements OnInit, AfterViewInit, OnChanges,
       if (this.input) {
         this.input.nativeElement.value = '';
       }
-      this.change$.emit(this.itemsList);
+      this.change.emit(this.itemsList);
     }
   }
 
@@ -80,7 +80,7 @@ export class NgBubbleInputComponent implements OnInit, AfterViewInit, OnChanges,
     } else {
       this.itemsList.pop();
     }
-    this.delete$.emit(this.itemsList);
+    this.delete.emit(this.itemsList);
   }
 
   ngOnDestroy(): void {
