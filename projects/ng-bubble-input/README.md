@@ -33,6 +33,21 @@ import { NgBubbleInputModule } from 'ng-bubble-input';
 
 ## **Styles**
 
+```scss
+::ng-deep.ng-bubble-input-box{
+' rewrite styles'
+  .ng-bubble-item{
+    'rewrite styles'
+    .ng-bubble-remove{
+      'rewrite styles'
+    }
+  }
+  .ng-bubble-input{
+    'rewrite styles'
+  }
+}
+
+
 ### You can use you custom class name for styling bubble-input
 
 ```angular2html
@@ -47,13 +62,13 @@ import { NgBubbleInputModule } from 'ng-bubble-input';
 ::ng-deep.my-custom-class{
 'some custom styles'
   .ng-bubble-item{
-  'some custom styles'
+    'some custom styles'
     .ng-bubble-remove{
       'some custom styles'
     }
   }
   .ng-bubble-input{
-  'some custom styles'
+    'some custom styles'
   }
 }
 ```
