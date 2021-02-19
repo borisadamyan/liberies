@@ -98,7 +98,7 @@ onChange(list) {
 ```
 
 #### Output value
-// array of strings  - ['I'm', 'bubble', 'input']
+// array of strings  - ["I'm", "bubble", "input"]
 
 
 
