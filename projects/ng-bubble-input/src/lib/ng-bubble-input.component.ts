@@ -20,33 +20,30 @@ import {takeUntil, tap} from 'rxjs/operators';
   templateUrl: './ng-bubble-input.component.html',
   styleUrls: ['./ng-bubble-input.component.scss']
 })
-export class NgBubbleInputComponent implements OnInit, AfterViewInit, OnChanges, OnDestroy {
+export class NgBubbleInputComponent implements AfterViewInit, OnChanges, OnDestroy {
 
   @ViewChild('input', {static: true}) input!: ElementRef;
 
-  @Output() change = new EventEmitter<string[]>();
+  @Output() public change = new EventEmitter<string[]>();
 
-  @Output() delete = new EventEmitter<string[]>();
+  @Output() public delete = new EventEmitter<string[]>();
 
-  @Input() defaultClass = 'ng-bubble-input-box';
+  @Input() public defaultClass = 'ng-bubble-input-box';
 
-  @Input() itemsList: string[] = [];
+  @Input() public itemsList: string[] = [];
 
   private destroy$ = new Subject<void>();
 
   constructor() {
   }
 
-  ngOnInit(): void {
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
+  public ngOnChanges(changes: SimpleChanges): void {
     if (this.input) {
       this.input.nativeElement.focus();
     }
   }
 
-  ngAfterViewInit(): void {
+  public ngAfterViewInit(): void {
     if (this.input) {
       fromEvent(this.input.nativeElement, 'keydown')
         .pipe(
@@ -83,7 +80,7 @@ export class NgBubbleInputComponent implements OnInit, AfterViewInit, OnChanges,
     this.delete.emit(this.itemsList);
   }
 
-  ngOnDestroy(): void {
+  public ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
   }
