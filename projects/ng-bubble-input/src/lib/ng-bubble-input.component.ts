@@ -62,7 +62,8 @@ export class NgBubbleInputComponent implements AfterViewInit, OnChanges, OnDestr
   }
 
   public onChange(val: string): void {
-    if (val.trim()) {
+    val = val.trim();
+    if (val) {
       this.itemsList.push(val);
       if (this.input) {
         this.input.nativeElement.value = '';
