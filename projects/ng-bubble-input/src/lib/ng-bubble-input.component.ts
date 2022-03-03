@@ -6,7 +6,6 @@ import {
   Input,
   OnChanges,
   OnDestroy,
-  OnInit,
   Output,
   SimpleChanges,
   ViewChild
@@ -16,6 +15,7 @@ import {fromEvent, Subject} from 'rxjs';
 import {takeUntil, tap} from 'rxjs/operators';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'ng-bubble-input',
   templateUrl: './ng-bubble-input.component.html',
   styleUrls: ['./ng-bubble-input.component.scss']
@@ -48,7 +48,7 @@ export class NgBubbleInputComponent implements AfterViewInit, OnChanges, OnDestr
       fromEvent(this.input.nativeElement, 'keydown')
         .pipe(
           tap((event: any) => {
-            if (event.keyCode === 32 || event.keyCode === 13) {
+            if (event.keyCode === 13) {
               event.preventDefault();
               this.onChange(this.input?.nativeElement.value);
             } else if (event.keyCode === 8 && !this.input?.nativeElement.value) {
