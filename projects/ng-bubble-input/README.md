@@ -14,11 +14,9 @@ https://stackblitz.com/edit/ng-bubble-input?file=src/app/app.component.ts
 
 ![Bubble input example image](https://github.com/borisadamyan/liberies/blob/master/src/assets/images/bubble-input.png?raw=true)
 
-## ** STABLE VERSION , copy and paste to your package.json**
-````"ng-bubble-input": "0.2.7",````
 
 ```angular2html
-<div style="width: 255px">
+<div style="width: 250px">
   <ng-bubble-input></ng-bubble-input>
 </div>
 ```
