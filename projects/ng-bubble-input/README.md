@@ -15,7 +15,7 @@ https://stackblitz.com/edit/ng-bubble-input?devtoolsheight=33&file=src/app/app.m
 ![Bubble input example image](https://github.com/borisadamyan/liberies/blob/master/src/assets/images/bubble-input.png?raw=true)
 
 ```angular2html
-<div style="width: 250px">
+<div style="width: 255px">
   <ng-bubble-input></ng-bubble-input>
 </div>
 ```
