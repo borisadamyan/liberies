@@ -1,6 +1,6 @@
 {
   "name": "ng-bubble-input",
-  "version": "0.2.7",
+  "version": "1.2.7",
   "description": "Collecting typed works from input to array",
   "author": "Boris Adamyan (Boramos)",
   "repository": {
